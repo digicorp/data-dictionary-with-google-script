@@ -4,7 +4,7 @@ This repository contains the end to end solution to create google app script tha
 
 1. [Core Library (Lib.gs)](#core-library)
 2. [Helper Class (Helper.gs)](#helper-class)
-3. [Controller (Controller.gs)](#controller)
+3. [Controller (Controller.gs)](#controller-class)
 
 _[Note : It is assumed that one will have basic knowledge of creating google app script on google spreadsheet. For basic steps you can refer [Google App Script](https://developers.google.com/apps-script/)]_
 
