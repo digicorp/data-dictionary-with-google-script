@@ -10,7 +10,6 @@ function onOpen() {
     spreadsheet.addMenu('Digicorp Data Dictionary', menuItems);
 }
 
-//Added Comment by developer user
 
 function CreateDataDictionary()
 {
