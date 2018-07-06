@@ -10,6 +10,7 @@ function onOpen() {
     spreadsheet.addMenu('Digicorp Data Dictionary', menuItems);
 }
 
+//Added comment for crucible to created
 
 function CreateDataDictionary()
 {
