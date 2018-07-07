@@ -61,9 +61,9 @@ function GetSheets(spreadsheet)
 
 ## Get Active Sheet
 
-`GetActiveSheet` function used to get the active OR specific sheet of spreadsheet. it takes `sheetname` as input argument. in case if `sheetname` passed as blank string, it returns active sheet, otherwise it return the sheet provided as `sheetname`
+`GetActiveSheet` function used to get the active OR specific sheet of spreadsheet. it takes `sheetname` as input argument. in case if `sheetname` argument is not provided, it returns active sheet, otherwise it return the sheet provided as `sheetname`
 
-We had need of get instance of Current Sheet and in some cases Specific Sheet. so we created a parameterized function that served purpose. To get the Current Active Sheet we can simply use this function with empty sting ('') and in case to get Specific Sheet we can simply use sheet name.
+We had need of get instance of Current Sheet and in some cases Specific Sheet. so we created a parameterized function that served purpose. To get the Current Active Sheet we can simply use this function with no argument () and in case to get Specific Sheet we can simply use sheet name.
 
 ```javascript
 /**
@@ -73,10 +73,10 @@ We had need of get instance of Current Sheet and in some cases Specific Sheet. s
 function GetActiveSheet(sheetname) {
     var sheet;
 
-    if (sheetname == '') {
-        sheet = SpreadsheetApp.getActive().getActiveSheet();
-    } else {
+    if (sheetname) {
         sheet = SpreadsheetApp.getActive().getSheetByName(sheetname);
+    } else {
+        sheet = SpreadsheetApp.getActive().getActiveSheet();
     }
     return sheet;
 }
