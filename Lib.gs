@@ -24,10 +24,10 @@ function GetSheets(spreadsheet)
 function GetActiveSheet(sheetname) {
     var sheet;
 
-    if (sheetname == '') {
-        sheet = SpreadsheetApp.getActive().getActiveSheet();
-    } else {
+    if (sheetname) {
         sheet = SpreadsheetApp.getActive().getSheetByName(sheetname);
+    } else {
+        sheet = SpreadsheetApp.getActive().getActiveSheet();
     }
     return sheet;
 }
